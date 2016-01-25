@@ -2,16 +2,41 @@
   <head>
     <title>Face</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+
+     	$("#cool-button").click( function() {
+        	$("#sunglasses").css("display", "inline-block");
+          $(".mouth").css("display", "none");
+          $(".mouth-cool").css("display", "block");
+          $("#cool-button").html("Nice.");
+
+    	});
+      $("#cool-button").hover( function() {
+          $("#cool-button").css("cursor", "pointer");
+      });
+
+    });
+
+    </script>
   </head>
   <body>
-    <div class="face center">
-	  <div class="hair"></div>
-	  <div class="eyes center">
-	    <div class="eye"></div>
-	    <div class="eye"></div>
+    <div class="face center" id="face">
+	    <div class="hair"></div>
+      <div class="eyes center">
+	      <div class="eye"></div>
+	      <div class="eye"></div>
+	    </div>
+	    <div class="nose center"></div>
+	    <div class="mouth center"></div>
+      <div class="mouth-cool center"></div>
+	    <div class="glasses center" id="sunglasses">
+	  	  <div class="glasses-eye"></div>
+	  	  <div class="glasses-eye"></div>
+	    </div>
 	  </div>
-	  <div class="nose center"></div>
-	  <div class="mouth center"></div>
-	</div>
+    <div class="button center" id="cool-button">Click here to make me cool...</div>
   </body>
 </html>
